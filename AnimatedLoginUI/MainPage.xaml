@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
+             x:Class="AnimatedLoginUI.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="10"
+            Margin="0,40"
+            Padding="30,0">
+
+            <Label Text="Skip"
+                   HorizontalTextAlignment="End"/>
+
+            <skia:SKLottieView
+                  RepeatCount="-1"
+                  RepeatMode="Reverse"
+                  Source="car.json" 
+                  HeightRequest="400"
+                  WidthRequest="400" />
+
+           <Button Text="Continue" CornerRadius="10" TextColor="White" FontAttributes="Bold" BackgroundColor="#2036a9" HorizontalOptions="Fill"/>
+           <Button Text="Sign up" CornerRadius="10" TextColor="White" FontAttributes="Bold" BackgroundColor="#6a7381" HorizontalOptions="Fill"/>
+
+            <Label HorizontalTextAlignment="Center" Margin="0,25">
+                <Label.FormattedText>
+                   <FormattedString>
+                        <Span Text="Have an account? "/>
+                       <Span Text="Sign In" TextDecorations="Underline"/>
+                   </FormattedString>
+                </Label.FormattedText> 
+            </Label>
+
+            <Label HorizontalTextAlignment="Center" TextColor="#939599">
+                <Label.FormattedText>
+                   <FormattedString>
+                       <Span Text="By using this app you agree to our &#10; &#10;"/>
+                       <Span Text="Terms " TextDecorations="Underline"/>
+                       <Span Text="&amp; "/>
+                       <Span Text="Conditions " TextDecorations="Underline"/>
+                   </FormattedString>
+                </Label.FormattedText> 
+            </Label> 
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
